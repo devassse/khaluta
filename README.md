@@ -1,0 +1,2 @@
+# khaluta
+Free access Platform
