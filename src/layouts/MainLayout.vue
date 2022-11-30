@@ -105,11 +105,12 @@
       <q-page-container style="padding-top: 0;">
         <q-page>
 
-          <div style="height: 100vh;background-color: #ccc;">
+          <div style="height: 100vh;background-color: #ccc;display: flex;justify-content: center;align-items: center;color: azure;">
             <!-- <iframe style="border:0;width:100%;height:100%;" loading="lazy" allowfullscreen
               referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAt5KGgZ1MqNMZxqKpnWm-Sg4Wdn0ovgns
     &q=Space+Needle,Seattle+WA">
             </iframe> -->
+            <h1 style="position:absolute;">GOOGLE MAP</h1>
           </div>
         </q-page>
       </q-page-container>
