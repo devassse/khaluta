@@ -1,11 +1,11 @@
 <template>
   <header class="top-grid">
     <div class="gallery">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
+      <img src="../assets/imgs/mountains.png" alt="" srcset="">
+      <img src="../assets/imgs/mountains.png" alt="" srcset="">
+      <img src="../assets/imgs/mountains.png" alt="" srcset="">
+      <img src="../assets/imgs/mountains.png" alt="" srcset="">
+      <img src="../assets/imgs/mountains.png" alt="" srcset="">
     </div>
     <div class="check-in">
       <div class="pass-desc">
@@ -125,26 +125,31 @@ export default {
   border: 1px dotted red;
   height: 600px;
 }
-.status-time{
+
+.status-time {
   margin-bottom: 2rem;
 }
+
 .title {
   font-size: 1.6rem;
   font-weight: bold;
 }
-.open-status{
+
+.open-status {
   background-color: rgb(153, 246, 153);
   padding: 0.2rem 0.4rem;
 }
+
 .time-close {
   margin-left: 1.4rem;
   font-weight: lighter;
 }
 
-.time-table-title{
+.time-table-title {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 .time-table {
   margin-top: 1.4rem;
 }

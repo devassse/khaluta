@@ -31,7 +31,14 @@
         </q-toolbar>
       </q-header>
 
-      <q-drawer v-model="drawer" :width="400" :breakpoint="600" overlay bordered class="bg-grey-3">
+      <q-drawer v-model="drawer" :width="450" :breakpoint="600" overlay bordered class="bg-grey-3">
+        <div class="close-drawer" @click="drawer = !drawer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
+          </svg>
+        </div>
         <q-scroll-area class="fit">
           <q-list>
             <q-item to="/gym">
@@ -54,7 +61,7 @@
               <q-item-section>
                 <div class="aside-list-item-card">
                   <div class="image-area">
-                    <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
+                    <img src="../assets/imgs/clouds.png" alt="" srcset="">
                   </div>
                   <div class="description">
                     <div class="description-title">
@@ -86,7 +93,7 @@
               <q-item-section>
                 <div class="aside-list-item-card">
                   <div class="image-area">
-                    <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
+                    <img src="../assets/imgs/clouds.png" alt="" srcset="">
                   </div>
                   <div class="description">
                     <div class="description-title">
@@ -105,7 +112,8 @@
       <q-page-container style="padding-top: 0;">
         <q-page>
 
-          <div style="height: 100vh;background-color: #ccc;display: flex;justify-content: center;align-items: center;color: azure;">
+          <div
+            style="height: 100vh;background-color: #ccc;display: flex;justify-content: center;align-items: center;color: azure;">
             <!-- <iframe style="border:0;width:100%;height:100%;" loading="lazy" allowfullscreen
               referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAt5KGgZ1MqNMZxqKpnWm-Sg4Wdn0ovgns
     &q=Space+Needle,Seattle+WA">
@@ -163,7 +171,7 @@ const menuList = [
 export default {
   setup() {
     return {
-      drawer: ref(false),
+      drawer: ref(true),
       menuList
     }
   }
@@ -206,6 +214,33 @@ export default {
   font-size: 16px;
   font-weight: bold;
   color: rgba(38, 121, 191, 0.5);
+}
+
+.q-drawer {
+  top: 0 !important;
+}
+
+.close-drawer {
+  padding: 10px 15px 5px 7px;
+  background-color: #eeeeee;
+  position: absolute;
+  top: 20px;
+  right: -45px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  cursor: pointer;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.close-drawer svg {
+  width: 20px;
+  height: auto;
+}
+
+.close-drawer:hover svg {
+  color: rgb(26, 75, 116);
 }
 
 .search-box {

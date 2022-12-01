@@ -1,11 +1,11 @@
 <template>
   <header class="top-grid">
     <div class="gallery">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
-      <img src="../assets/imgs/mountains.jpg" alt="" srcset="">
+      <img src="../assets/imgs/clouds.png" alt="" srcset="">
+      <img src="../assets/imgs/clouds.png" alt="" srcset="">
+      <img src="../assets/imgs/clouds.png" alt="" srcset="">
+      <img src="../assets/imgs/clouds.png" alt="" srcset="">
+      <img src="../assets/imgs/clouds.png" alt="" srcset="">
     </div>
     <div class="check-in">
       <div class="pass-desc">
@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  setup(){
+  setup() {
     return {
 
     }
@@ -40,23 +40,25 @@ export default {
   align-items: center;
   position: relative;
 }
-.gallery{
+
+.gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.8rem;
 }
 
-.gallery img{
+.gallery img {
   width: 100%;
   height: auto;
 }
-.gallery img:first-of-type{
+
+.gallery img:first-of-type {
   grid-column: 1/ span 2;
   grid-row: 1/span 2;
 }
 
 .check-in {
-  padding:1.2rem;
+  padding: 1.2rem;
   border-radius: 15px;
   background-color: #fff;
   display: flex;
@@ -64,7 +66,7 @@ export default {
   justify-content: space-between;
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
   position: absolute;
-  bottom:-35px;
+  bottom: -35px;
   cursor: pointer;
   transition: all .1s;
 }
@@ -74,11 +76,13 @@ export default {
   background-color: #ccc;
   border: 4px inset #fff;
 }
+
 .pass-desc {
   display: flex;
   flex-direction: column;
 }
-.main-container{
+
+.main-container {
   width: 60%;
   margin: 3rem auto;
 
