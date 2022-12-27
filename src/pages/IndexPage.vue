@@ -112,12 +112,8 @@
       <q-page-container style="padding-top: 0;">
         <q-page>
 
-          <div
+          <div id="map"
             style="height: 100vh;background-color: #ccc;display: flex;justify-content: center;align-items: center;color: azure;">
-            <!-- <iframe style="border:0;width:100%;height:100%;" loading="lazy" allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAt5KGgZ1MqNMZxqKpnWm-Sg4Wdn0ovgns
-    &q=Space+Needle,Seattle+WA">
-            </iframe> -->
             <h1 style="position:absolute;">GOOGLE MAP</h1>
           </div>
         </q-page>
@@ -169,11 +165,25 @@ const menuList = [
 ]
 
 export default {
-  setup() {
+  data() {
     return {
-      drawer: ref(true),
-      menuList
+      drawer: ref(false),
+      menuList,
+      map: ''
     }
+  },
+
+  methods: {
+    initMap() {
+      this.map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -25.900963, lng: 32.591069 },
+        zoom: 12,
+      });
+    }
+  },
+
+  mounted() {
+    this.initMap()
   }
 }
 </script>
